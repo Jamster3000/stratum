@@ -1,0 +1,59 @@
+(
+    id: 3,
+    name: "jungle",
+
+    // Terrain generation parameters
+    height_scale: 56.0,
+    height_offset: 70.0,
+    noise_scale: 0.10,
+    noise_octaves: 4,
+    noise_persistence: 0.6,
+    noise_lacunarity: 2.2,
+
+    //environment
+    temperature: 28.0,
+    humidity: 0.85,
+    weather_chance: {
+        "rain": 0.7,
+        "clear": 0.4,
+    },
+
+    block_layers: [
+        "grass",
+        "dirt",
+        "stone",
+    ],
+
+    ores: [
+        (
+            name: Some("Coal Ore"),
+            min_y: 0,
+            max_y: 80,
+            density: 0.03,
+            vein_size: 6,
+        ),
+    ],
+
+    structures: [
+        (
+            name: "jungle_temple",
+            function: false,
+            density: 0.001,
+        ),
+    ],
+
+    vegetation_density: 0.95,
+    tree_density: 0.8,
+    cave_density: 0.04,
+
+    mobs: [
+        (
+            name: "parrot",
+            spawn_weight: 6,
+        ),
+        (
+            name: "jaguar",
+            spawn_weight: 1,
+        ),
+    ],
+)

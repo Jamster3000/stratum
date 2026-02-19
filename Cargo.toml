@@ -1,0 +1,60 @@
+[package]
+name = "stratum"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { version = "0.14", default-features = false, features = [
+    "bevy_winit",
+    "bevy_asset", 
+    "bevy_render",
+    "bevy_core_pipeline",
+    "bevy_pbr",
+    "bevy_ui",
+    "bevy_text",
+    "png",
+    "x11",
+    "multi_threaded",
+    "bevy_gizmos",
+    "tonemapping_luts",
+]}
+bevy_atmosphere = "0.10"
+noise = "0.9"
+futures = "0.3"
+rayon = "1.7"
+serde = { version = "1.0", features = ["derive"] }
+ron = "0.8"
+notify = "6.0"
+image = { version = "0.25", default-features = false, features = [
+    "png",
+]}
+chrono = "0.4"
+sysinfo = "0.29"
+
+[dev-dependencies]
+criterion = "0.4"
+
+[profile.release]
+opt-level = 'z'
+lto = "fat"
+codegen-units = 1
+strip = true
+panic = 'abort'
+
+[profile.dev]
+opt-level = 0
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.flamegraph]
+inherits = "release"
+opt-level = 2
+lto = false 
+codegen-units = 16    
+strip = false         
+debug = true      
+
+[[bench]]
+name = "benchmark"
+harness = false

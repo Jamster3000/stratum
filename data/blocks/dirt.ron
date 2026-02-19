@@ -1,0 +1,95 @@
+(
+    // ========================================
+    // IDENTITY
+    // ========================================
+    name: "dirt",
+    id: 2,
+    tags: ["dirt", "mineable_shovel", "building_block", "natural"],
+    
+    // ========================================
+    // VISUAL PROPERTIES
+    // ========================================
+    textures: (
+        top: "textures/blocks/dirt.png",
+        bottom: "textures/blocks/dirt.png",
+        side: "textures/blocks/dirt.png",
+    ),
+    color_tint: (0.85, 0.75, 0.55),
+    render_type: "solid",
+    transparent: false,
+    
+    // ========================================
+    // PHYSICAL PROPERTIES
+    // ========================================
+    solid: true,
+    friction: 0.7,
+    slipperiness: 0.6,
+    affected_by_gravity: false,
+    fall_damage_multiplier: 1.0,
+    climbable: false,
+    climb_speed: 2.0,
+    can_grab_ledge: false,
+    collision_box: "full",
+    
+    // ========================================
+    // BREAKING & MINING
+    // ========================================
+    breakable: true,
+    hardness: 0.5,
+    tool_required: Some("shovel"),
+    tool_tier: 0,
+    blast_resistance: 0.5,
+    
+    // ========================================
+    // DROPS
+    // ========================================
+    drop_item: "dirt",
+    drop_count: 1,
+    
+    // ========================================
+    // LIGHTING
+    // ========================================
+    light_level: 0,
+    
+    // ========================================
+    // FIRE PROPERTIES
+    // ========================================
+    flammable: false,
+    burn_time: 0.0,
+    fire_spread_chance: 0.0,
+    
+    // ========================================
+    // INTERACTION
+    // ========================================
+    interactable: false,
+    interaction_type: None,
+    replaceable: false,
+    
+    // ========================================
+    // UPDATES & TICKING
+    // ========================================
+    ticks: false,
+    tick_rate: 1.0,
+    random_tick: false,
+    
+    // ========================================
+    // ITEM PROPERTIES (when in inventory)
+    // ========================================
+    max_stack_size: 64,
+    durability: None,
+    
+    // ========================================
+    // AUDIO
+    // ========================================
+    sounds: (
+        break_sound: "sounds/blocks/dirt_break.ogg",
+        place_sound: "sounds/blocks/dirt_place.ogg",
+        step_sound: "sounds/blocks/dirt_step.ogg",
+    ),
+    
+    // ========================================
+    // ADVANCED FEATURES
+    // ========================================
+    mechanical: None,
+    multiblock: None,
+)

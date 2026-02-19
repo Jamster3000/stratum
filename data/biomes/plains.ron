@@ -1,0 +1,76 @@
+(
+    id: 4,
+    name: "plains",
+
+    // Terrain generation parameters
+    height_scale: 40.0,
+    height_offset: 64.0,
+    noise_scale: 0.08,
+    noise_octaves: 4,
+    noise_persistence: 0.55,
+    noise_lacunarity: 2.0,
+
+    //environment
+    temperature: 15.0, // This should be actually temperature in Celcius
+    humidity: 0.4,
+    weather_chance: { //1.0 being 100% chance, aka constantly, 0.0 being never
+        "rain": 0.4,
+        "snow": 0.1,
+        "thunder": 0.2,
+        "clear": 0.9,
+    },
+
+    block_layers: [
+        "dirt",
+        "stone",
+    ],
+
+     // Ores (There are no ores but this is just an example)
+    ores: [
+        (
+            name: Some("Iron ore"),
+            min_y: 0,
+            max_y: 64,
+            density: 0.02, // Chance per chunk
+            vein_size: 4,  // Average vein size
+        ),
+        (
+            name: Some("Coal Ore"),
+            min_y: 0,
+            max_y: 128,
+            density: 0.05,
+            vein_size: 8,
+        ),
+    ],
+
+    structures: [
+        (
+            name: "tree",
+            function: true, // Generated procedurally
+            function_name: Some("generate_tree"),
+            density: 0.05,  // Matches your tree_density
+        ),
+        (
+            name: "village",
+            function: false, // Predefined structure
+            density: 0.001,  // Rare
+        ),
+    ],
+
+    // Vegetation and features
+    vegetation_density: 0.5,
+    tree_density: 0.05,
+    cave_density: 0.05,
+
+    //example mobs (there are no current mobs)
+    mobs: [
+        (
+            name: "cow",
+            spawn_weight: 10,
+        ),
+        (
+            name: "sheep",
+            spawn_weight: 8,
+        ),
+    ],
+)

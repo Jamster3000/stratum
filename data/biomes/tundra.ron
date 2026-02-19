@@ -1,0 +1,41 @@
+(
+    id: 6,
+    name: "tundra",
+
+    // Terrain generation parameters
+    height_scale: 35.0,
+    height_offset: 60.0,
+    noise_scale: 0.06,
+    noise_octaves: 3,
+    noise_persistence: 0.45,
+    noise_lacunarity: 1.9,
+
+    // Environment
+    temperature: -2.0,
+    humidity: 0.3,
+    weather_chance: {
+        "snow": 0.6,
+        "clear": 0.4,
+    },
+
+    block_layers: [
+        "snow",
+        "dirt",
+        "stone",
+    ],
+
+    ores: [],
+
+    structures: [],
+
+    vegetation_density: 0.05,
+    tree_density: 0.02,
+    cave_density: 0.01,
+
+    mobs: [
+        (
+            name: "polar_bear",
+            spawn_weight: 1,
+        ),
+    ],
+)

@@ -1,0 +1,67 @@
+(
+    id: 2,
+    name: "forest",
+
+    // Terrain generation parameters
+    height_scale: 48.0,
+    height_offset: 68.0,
+    noise_scale: 0.09,
+    noise_octaves: 4,
+    noise_persistence: 0.55,
+    noise_lacunarity: 2.0,
+
+    //environment
+    temperature: 12.0,
+    humidity: 0.65,
+    weather_chance: {
+        "rain": 0.5,
+        "clear": 0.6,
+        "thunder": 0.1,
+    },
+
+    block_layers: [
+        "grass",
+        "dirt",
+        "stone",
+    ],
+
+    ores: [
+        (
+            name: Some("Coal Ore"),
+            min_y: 0,
+            max_y: 80,
+            density: 0.04,
+            vein_size: 8,
+        ),
+        (
+            name: Some("Iron Ore"),
+            min_y: 0,
+            max_y: 64,
+            density: 0.02,
+            vein_size: 6,
+        ),
+    ],
+
+    structures: [
+        (
+            name: "forest_hut",
+            function: false,
+            density: 0.005,
+        ),
+    ],
+
+    vegetation_density: 0.85,
+    tree_density: 0.65,
+    cave_density: 0.06,
+
+    mobs: [
+        (
+            name: "deer",
+            spawn_weight: 8,
+        ),
+        (
+            name: "wolf",
+            spawn_weight: 3,
+        ),
+    ],
+)

@@ -1,0 +1,62 @@
+(
+    id: 5,
+    name: "mountains",
+
+    // Terrain generation parameters
+    height_scale: 120.0,
+    height_offset: 80.0,
+    noise_scale: 0.04,
+    noise_octaves: 5,
+    noise_persistence: 0.55,
+    noise_lacunarity: 2.4,
+
+    //environment
+    temperature: 2.0,
+    humidity: 0.4,
+    weather_chance: {
+        "clear": 0.6,
+        "snow": 0.3,
+    },
+
+    block_layers: [
+        "stone",
+        "gravel",
+        "bedrock",
+    ],
+
+    ores: [
+        (
+            name: Some("Iron Ore"),
+            min_y: 0,
+            max_y: 120,
+            density: 0.03,
+            vein_size: 6,
+        ),
+        (
+            name: Some("Gold Ore"),
+            min_y: 20,
+            max_y: 64,
+            density: 0.005,
+            vein_size: 2,
+        ),
+    ],
+
+    structures: [
+        (
+            name: "mountain_shrine",
+            function: false,
+            density: 0.0005,
+        ),
+    ],
+
+    vegetation_density: 0.1,
+    tree_density: 0.02,
+    cave_density: 0.12,
+
+    mobs: [
+        (
+            name: "goat",
+            spawn_weight: 4,
+        ),
+    ],
+)
