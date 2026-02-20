@@ -26,6 +26,15 @@ There are some basic features to this so far
 - **Block interaction**: All blocks are the same, but can be broken and placed instantly (There's a bug where they can't be placed on the top y-level).
 - **Atmosphere**: Currently using Bevy_atmosphere to make this atmosphere, then using shaders and directional light to light the world up (Plans to change this after upgrading newer Bevy versions).
 
+# Terminal commands
+- **Flamemgraph**: `cargo flamegraph --bin startum --profile flamegraph`
+- **Generate Documentation**: `cargo doc --no-deps --open`
+- **Generate Release**: `cargo run --release`
+- **Generate Debug**: `cargo run --features bevy/dynamic_linking`
+- **Clippy**: `cargo clippy -- -W clippy::pedantic`
+- **LLVM IR**: `cargo llvm-lines --bin stratum | Select-String "stratum" | Sort-Object -Property Line -Descending | Out-File -FilePath "llvm_lines_sorted.txt"`
+- **Benchmarking**: `cargo bench`
+
 # Screenshots
 Please note that nothing below is a final design or anything, just plans and draft ideas.
 
